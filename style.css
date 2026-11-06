@@ -1,26 +1,166 @@
+:root {
+  --ink: #161816;
+  --paper: #FCFBF8;
+  --yellow: #FFE600;
+  --pink: #FF0A78;
+  --blue: #1A6BFF;
+  --green: #33F2A0;
+}
+
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #fcfbf8;
-  color: #111;
+  font-family: Poppins, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
 }
 
-header, section {
-  padding: 60px 8vw;
+a { color: inherit; }
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6vw;
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 10;
+}
+.logo { font-weight: 800; font-size: 20px; text-decoration: none; }
+.logo span { color: var(--pink); }
+.links a { margin-left: 24px; text-decoration: none; font-weight: 600; font-size: 15px; }
+.links .pill { background: var(--ink); color: #fff; padding: 8px 18px; border-radius: 999px; }
+
+/* HERO */
+.hero { padding: 120px 6vw 100px; }
+.kicker { font-size: 14px; font-weight: 600; color: var(--blue); margin: 0 0 16px; }
+.hero h1 {
+  font-size: clamp(48px, 9vw, 130px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  margin: 0 0 32px;
+  max-width: 14ch;
+}
+.lead { font-size: 18px; max-width: 520px; color: #444; margin: 0 0 32px; }
+.btn {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--ink);
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid var(--ink);
 }
 
+/* SECTION HEAD */
+.sec-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 40px;
+}
+.sec-head h2 { font-size: clamp(36px, 5vw, 56px); font-weight: 800; margin: 0; }
+.sec-head span { color: var(--pink); }
+.sec-head a { font-weight: 600; text-decoration: none; }
+
+/* FEATURED */
+.featured { padding: 40px 6vw 100px; }
+.big { margin-bottom: 80px; }
+.big .media {
+  aspect-ratio: 16 / 9;
+  background: var(--c);
+  border-radius: 20px;
+  border: 3px solid var(--ink);
+}
+.big .meta { display: flex; justify-content: space-between; align-items: baseline; margin-top: 16px; flex-wrap: wrap; gap: 8px; }
+.big h3 { font-size: 26px; margin: 0; }
+.big p { margin: 0; color: #555; }
+
+/* ALL WORKS */
+.all { padding: 40px 6vw 100px; background: #fff; }
+.filters { display: flex; gap: 10px; margin-bottom: 32px; flex-wrap: wrap; }
+.filters button {
+  border: 2px solid var(--ink);
+  background: transparent;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.filters button.on { background: var(--ink); color: #fff; }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 36px 24px;
 }
-
-.card {
-  border: 2px solid #111;
-  padding: 24px;
+.item { text-decoration: none; }
+.thumb {
+  aspect-ratio: 4 / 3;
+  background: var(--c);
+  border-radius: 14px;
+  border: 3px solid var(--ink);
   transition: transform 0.2s;
 }
+.item:hover .thumb { transform: translate(-4px, -4px); box-shadow: 6px 6px 0 var(--ink); }
+.item h4 { margin: 14px 0 0; font-size: 17px; }
+.item span { font-size: 13px; color: #666; }
 
-.card:hover {
-  transform: translateY(-6px);
+/* ABOUT */
+.about {
+  padding: 100px 6vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+}
+.about h2 { font-size: 40px; font-weight: 800; margin-top: 0; }
+.about h3 { font-size: 20px; margin-top: 24px; }
+.about ul { padding-left: 20px; }
+
+/* PROCESS */
+.process { padding: 100px 6vw; background: var(--ink); color: #fff; }
+.process .sec-head h2 span { color: var(--green); }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.step {
+  border-top: 6px solid var(--c);
+  padding-top: 20px;
+}
+.step h3 { font-size: 22px; margin: 0 0 8px; }
+.step p { margin: 0; color: #ccc; }
+
+/* CONTACT */
+.contact {
+  background: var(--pink);
+  color: #fff;
+  padding: 120px 6vw;
+  text-align: center;
+}
+.contact h2 { font-size: clamp(48px, 9vw, 120px); font-weight: 800; margin: 0 0 32px; line-height: 1; }
+.contact h2 span { color: var(--yellow); }
+.contact .btn { background: var(--ink); color: #fff; border-color: var(--ink); }
+.social { margin-top: 36px; }
+.social a { margin: 0 14px; font-weight: 600; }
+
+footer {
+  background: var(--ink);
+  color: #aaa;
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+}
+
+/* HP */
+@media (max-width: 700px) {
+  .links a:not(.pill) { display: none; }
+  .sec-head { flex-direction: column; gap: 12px; }
 }

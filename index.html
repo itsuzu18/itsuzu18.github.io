@@ -3,34 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nama Kamu | Motion & UI/UX Designer</title>
+  <title>Itsuzu | Motion & UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Nama Kamu</h1>
-    <p>Motion Graphic Designer · UI/UX Designer</p>
+
+  <nav class="nav">
+    <a href="#" class="logo">Itsuzu<span>works</span></a>
+    <div class="links">
+      <a href="#karya">Karya</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#proses">Proses</a>
+      <a href="#kontak" class="pill">Kontak</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="kicker">Motion Graphic Artist · MV Compositor · UI/UX Designer</p>
+    <h1>Video yang terasa, bukan cuma ditonton.</h1>
+    <p class="lead">Saya membuat motion, MV, dan animasi untuk VTuber serta brand, dan merancang UI/UX yang rapi.</p>
+    <a href="#karya" class="btn">Lihat karya ↓</a>
   </header>
 
-  <section id="karya">
-    <h2>Karya</h2>
+  <section id="karya" class="featured">
+    <div class="sec-head">
+      <h2>Karya <span>unggulan</span></h2>
+      <a href="#semua">Semua karya →</a>
+    </div>
+
+    <article class="big">
+      <div class="media" style="--c: var(--pink)"></div>
+      <div class="meta">
+        <h3>Judul Proyek Utama</h3>
+        <p>Music Video · Directing, Motion Graphics</p>
+      </div>
+    </article>
+
+    <article class="big reverse">
+      <div class="media" style="--c: var(--blue)"></div>
+      <div class="meta">
+        <h3>Judul Proyek Kedua</h3>
+        <p>Debut Teaser · Animating, 2D Compositing</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="semua" class="all">
+    <div class="sec-head">
+      <h2>Semua <span>karya</span></h2>
+    </div>
+    <div class="filters">
+      <button class="on">Semua</button>
+      <button>Motion</button>
+      <button>UI/UX</button>
+      <button>Branding</button>
+    </div>
     <div class="grid">
-      <article class="card">
-        <h3>Nama Proyek</h3>
-        <p>Peran kamu, tools yang dipakai, dan hasilnya.</p>
-      </article>
-      <article class="card">
-        <h3>Nama Proyek 2</h3>
-        <p>Peran kamu, tools yang dipakai, dan hasilnya.</p>
-      </article>
+      <a class="item" href="#"><div class="thumb" style="--c: var(--yellow)"></div><h4>Judul 1</h4><span>Motion</span></a>
+      <a class="item" href="#"><div class="thumb" style="--c: var(--green)"></div><h4>Judul 2</h4><span>UI/UX</span></a>
+      <a class="item" href="#"><div class="thumb" style="--c: var(--pink)"></div><h4>Judul 3</h4><span>Branding</span></a>
+      <a class="item" href="#"><div class="thumb" style="--c: var(--blue)"></div><h4>Judul 4</h4><span>Motion</span></a>
+      <a class="item" href="#"><div class="thumb" style="--c: var(--green)"></div><h4>Judul 5</h4><span>UI/UX</span></a>
+      <a class="item" href="#"><div class="thumb" style="--c: var(--yellow)"></div><h4>Judul 6</h4><span>Motion</span></a>
     </div>
   </section>
 
-  <section id="kontak">
-    <h2>Kontak</h2>
-    <a href="mailto:emailkamu@gmail.com">Hubungi saya</a>
+  <section id="tentang" class="about">
+    <div>
+      <h2>Tentang saya</h2>
+      <p>Saya Itsuzu, lulusan DKV yang fokus pada motion graphics dan animasi. Saya suka membantu VTuber dan musisi menyampaikan pesan lagu lewat visual yang hidup.</p>
+    </div>
+    <div>
+      <h3>Layanan</h3>
+      <ul>
+        <li>Music Video & Motion Graphics</li>
+        <li>VTuber Debut Teaser</li>
+        <li>Stream Overlay Animation</li>
+        <li>UI/UX Design</li>
+      </ul>
+      <h3>Tools</h3>
+      <p>After Effects · Photoshop · Illustrator · Figma · Blender</p>
+    </div>
   </section>
 
-  <script src="script.js"></script>
+  <section id="proses" class="process">
+    <div class="sec-head">
+      <h2>Di balik <span>layar</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step" style="--c: var(--pink)">
+        <h3>Ide & referensi</h3>
+        <p>Membaca lagu dan karakter, lalu mengumpulkan referensi visual.</p>
+      </div>
+      <div class="step" style="--c: var(--blue)">
+        <h3>Produksi</h3>
+        <p>Animasi, compositing, dan sound design dalam satu alur kerja.</p>
+      </div>
+      <div class="step" style="--c: var(--green)">
+        <h3>Revisi & hasil</h3>
+        <p>Dua kali revisi minor, lalu file final dikirim dalam format yang dibutuhkan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="contact">
+    <h2>Yuk bikin <span>sesuatu.</span></h2>
+    <a href="mailto:emailkamu@gmail.com" class="btn">Hubungi saya</a>
+    <div class="social">
+      <a href="#">X</a>
+      <a href="#">YouTube</a>
+      <a href="#">Instagram</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Itsuzu. All rights reserved.</footer>
+
 </body>
 </html>
